@@ -10,8 +10,11 @@ server.use(cors({credentials: true, origin: ["http://localhost:3000", "https://l
 const bodyParser = require("body-parser");
 //give the server the ability to parse json from the body of request
 server.use(bodyParser.json());
-// get becryp module from npm for encrypting passwords
+// get becrypt module from npm for encrypting passwords
 const bcrypt = require("bcrypt");
+
+// get db module from ./db/db so the server can interact with the database
+const { db } = require("./db/db");
 
 // set the port to the PORT environment variable
 let port = process.env.PORT;
