@@ -1,0 +1,28 @@
+-------- Capstone Project --------
+name: Where's The ...?
+description: a shopping list app that organizes the list
+             based on the store aisle the item is in.
+
+-------- User Stories --------
+As a user, I can:
+
+- read a list
+- add an item to a list using the mouse or keyboard
+- mark any item as completed, using the mouse or keyboard
+- delete any item, using the mouse or keyboard
+- edit any item, using the mouse or keyboard
+- choose the current store, using the mouse or keyboard
+
+-------- Store model --------
+
+
+
+
+-------- Item model --------
+- aisle: DataTypes.STRING
+- base_price: DataTypes.DECIMAL
+- categorie.id: DataTypes.INTEGER
+- categorie.name: DataTypes.STRING
+- fulfillment_store_number: DataTypes.INTEGER
+- name: DataTypes.STRING
+- usa_snap_eligible: DataTypes.BOOLEAN
