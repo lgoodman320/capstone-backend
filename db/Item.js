@@ -3,7 +3,7 @@ const { DataTypes } = require("sequelize");
 const { db } = require("./db");
 
 // Create Item model
-const Item - (db) => {
+const Item = (db) => {
     return db.define("item", {
         id: {
             type: DataTypes.INTEGER,
