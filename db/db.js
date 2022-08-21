@@ -8,6 +8,10 @@ let options = {};
 // to work with heroku's database
 let databaseURL = process.env.DATABASE_URL;
 
+// 
+const Item = require("./Item")(db);
+
+
 // if running database on localhost
 if (!databaseURL) {
     // set databaseURL to the localhost database URL
@@ -38,7 +42,7 @@ const db = new Sequelize(databaseURL, options);
 
 // TODO: Create functin to load items into database
 
-// TODO: Function for testing the connection to the database
+// Function for testing the connection to the database
 const connectToDB = async () => {
     try {
         await db.authenticate();
@@ -53,4 +57,4 @@ const connectToDB = async () => {
 
 connectToDB();
 
-module.exports = { db }; // export out the db model so we can use it elsewhere in out code
+module.exports = { db, Item }; // export out the db model so we can use it elsewhere in out code

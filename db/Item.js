@@ -20,3 +20,5 @@ const Item = (db) => {
         usa_snap_eligible: DataTypes.BOOLEAN,
     });
 };
+
+module.exports = Item;
