@@ -12,6 +12,7 @@ const Item = (db) => {
         },
         aisle: DataTypes.STRING,
         base_price: DataTypes.DECIMAL,
+        brand_name: DataTypes.STRING,
         categorie_id: DataTypes.INTEGER,
         categorie_name: DataTypes.STRING,
         fulfillment_store_number: DataTypes.INTEGER,

@@ -36,3 +36,5 @@ server.listen(port, () => {
     // console log "Server is running."
 	console.log("Server running.");
 });
+
+const storeArray = ["wegmans-dewitt-items.js", "wegmans-fairmount-items.js", "wegmans-great-northern-items.js", "wegmans-james-st-items.js", "wegmans-john-glenn-items.js", "wegmans-onondaga-items.js", "wegmans-taft-road-items.js"];

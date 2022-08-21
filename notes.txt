@@ -21,6 +21,7 @@ As a user, I can:
 -------- Item model --------
 - aisle: DataTypes.STRING
 - base_price: DataTypes.DECIMAL
+- brand_name: DataTypes.STRING
 - categorie.id: DataTypes.INTEGER
 - categorie.name: DataTypes.STRING
 - fulfillment_store_number: DataTypes.INTEGER
