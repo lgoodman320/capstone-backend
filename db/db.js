@@ -42,8 +42,9 @@ const Item = require("./Item")(db);
 // const storeArray = ["wegmans-dewitt-items.js", "wegmans-fairmount-items.js", "wegmans-great-northern-items.js", "wegmans-james-st-items.js", "wegmans-john-glenn-items.js", "wegmans-onondaga-items.js", "wegmans-taft-road-items.js"];
 
 
-const storeArray = ['/wegmans-dewitt-items.js'];
+const storeArray = ['/wegmans-dewitt-items.json','/wegmans-fairmount-items.json', '/wegmans-great-northern-items.json', '/wegmans-james-st-items.json', '/wegmans-john-glenn-items.json', '/wegmans-onondaga-items.json', '/wegmans-taft-road-items.json'];
 
+//let item_count = 0;
 for (const store of storeArray) {
     let myReadStream = fs.createReadStream(__dirname + store, 'utf8')
     myReadStream.on('data', (chunk) => {
