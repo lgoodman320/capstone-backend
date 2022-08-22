@@ -27,3 +27,8 @@ As a user, I can:
 - fulfillment_store_number: DataTypes.INTEGER
 - name: DataTypes.STRING
 - usa_snap_eligible: DataTypes.BOOLEAN
+
+-------- Load items from file --------
+for all of the files in the store array
+    read the file and store it in a variable
+        loop through the file and append each item to the array
