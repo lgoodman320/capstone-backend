@@ -37,6 +37,12 @@ const db = new Sequelize(databaseURL, options);
 // import Item model
 const Item = require("./Item")(db);
 
+// import Store model
+const Store = require("./Store")(db);
+
+// import store data
+const stores = require("./stores");
+
 // array of filenames to read item data from
 const storeArray = [
     "/wegmans-dewitt-items.json",
@@ -109,5 +115,27 @@ const connectToDB = async () => {
 };
 
 connectToDB();
+
+const loadStoreData = async () => {
+    const storesDB = await Store.findAll();
+    if (storesDB.length === 0) {
+        for (const store of stores) {
+            Store.create({
+                ext_id: store.ext_id,
+                store_banner_name: store.store_banner.name,
+                store_banner_ext_id: store.store_banner.ext_id,
+                name: store.name,
+                store_id: store.id,
+                store_address: store.address.address1,
+                store_city: store.address.city,
+                store_province: store.address.province,
+                store_country: store.address.country,
+                store_phone: store.phone_number,
+                ebt_enabled_in_state: store.ebt_enabled_in_state,
+            });
+        }
+    }
+};
+loadStoreData();
 
 module.exports = { db, Item }; // export out the db model so we can use it elsewhere in out code
